@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, n, num, sum = 0;
+    float mean;
+
+    printf("Enter the number of values: ");
+    scanf("%d", &n);
+
+    printf("Enter the values:\n");
+
+    for (i = 1; i <= n; i++)
+    {
+        scanf("%d", &num);
+        sum = sum + num;
+    }
+
+    if (n > 0)
+    {
+        mean = sum / (float)n;
+
+        printf("Sum = %d\n", sum);
+        printf("Mean = %.2f", mean);
+    }
+    else
+    {
+        printf("Number of values must be positive.");
+    }
+
+    return 0;
+}
